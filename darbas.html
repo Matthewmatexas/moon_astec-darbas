@@ -422,7 +422,7 @@
 #arrow1{
   position: absolute; 
   left: 4%; 
-  top: 345px; 
+  top: 343px; 
   transition: 0.3s; 
   opacity: 0; 
   cursor: pointer; 
@@ -471,6 +471,10 @@
   top: 220px;
   right: 2.5%;
 }
+#buttoe{
+  display: none;
+  opacity: 0;
+}
 }
     </style>
     <div id="screen">
@@ -481,17 +485,10 @@
    <div class="nuotrauka"></div>
    <h2>Employee: Moon_astec&#9789;</h2>
         <section>
-     
-          <div id="back2" onclick="closeAdd()"></div>
-    <div id="add">
-      <i class="fas fa-times" id="closing" onclick="closeAdd()"></i>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclQ_87P8Pb_Zt-G_-71Ekanl7vUZwZX1sNzg4j0C-Soez9pQ/viewform?usp=sf_link" frameborder="0" style="width: 100%; height: auto; margin-top: 75px; border-radius: 15px;"></iframe>
-    </div>
           
       <button class="open-button2" onclick="openForm()"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
       <button class="btnu" id="butto" onclick="openMoon()"><i class="fa-solid fa-moon" style="font-size: 20px; transform: rotate(-150deg);" id="moon"></i></button>
       <div style="width: 60px; height: 60px; border-radius: 100%; position: fixed; bottom: 7px; left: 20px; opacity: 0; display: none; margin: 13px auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite;" id="loader3"></div>
-      <button class="btnu" id="buttoe" style="top: 20px; z-index: 20;" onclick="openAdd()"><i class="fa-solid fa-plus" style="font-size: 20px;" id="moon"></i></button>
        <div class="chat-popup2" id="myForm2">
   <form action="prisijungimas.html" class="form-container2" id="formo">
   <h1 style="margin-bottom: 10px; font-size: 20px;">Log out</h1>
@@ -505,6 +502,7 @@
   </form>
 </div>
       </section>
+      <div style="width: 300px; height: 50px; border-radius: 15px; background-color: lightgrey; position: fixed; bottom: 100px; box-shadow: 0 0 10px darkgrey; left: -400px; transition: 0.3s; display: flex; justify-content: center; align-items: center;" id="start"><p>Download started...</p></div>
       <div style="width: 60px; height: 60px; transition: 0.3s; background-color: lightgrey; border-radius: 100%; display: flex; justify-content: center; align-items: center; position: absolute; top: 20px; right: 20px; cursor: pointer; z-index: 10;" id="show" onclick="myFunction()">
         <i class="fa-solid fa-user" style="font-size: 30px; color: black;"></i>
     </div>
@@ -517,11 +515,11 @@
     <div id="completeInfo1"><p>Please <a href="mailto:matas.kaspar@gmail.com" style="color: blue; text-decoration: underline; cursor: pointer;" target="_blank">send us</a> the completed file. <br> <span style="color: red;">The work website will be updated after the file will be checked by admins.</span></p></div>
     <div id="fileMenu"><p id="download1" onclick="download1()"><i class="fa-solid fa-file-arrow-down"></i> Download</p><p id="complete1" onclick="complete1()"><i class="fa-solid fa-check"></i> Complete</p><div style="width: 37px; height: 37px; border-radius: 100%; display: none; opacity: 0; margin: 0 auto; box-shadow: 2px 0 10px darkgray; left: 85px; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite; position: absolute;" id="loading1"></div><div style="width: 37px; height: 37px; border-radius: 100%; display: none; opacity: 0; margin: 0 auto; box-shadow: 2px 0 10px darkgray; left: 255px; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite; position: absolute;" id="loading2"></div></div>
 
-   <!-- <div class="file" onclick="file1()" id="file1"><p style="cursor: pointer;">test need to be fixed</p></div>
-   <i class="fa-solid fa-arrow-down" id="arrow1" onclick="file1close()"></i> -->
-    <hr style="border-top: 2px solid black;">
+   <div class="file" onclick="file1()" id="file1"><p style="cursor: pointer;">need to fix item descriptions</p></div>
+   <i class="fa-solid fa-arrow-down" id="arrow1" onclick="file1close()"></i>
+    <!-- <hr style="border-top: 2px solid black;">
     <p style="margin: 15px;">There is no work currently.</p>
-    <hr style="border-top: 2px solid black;">
+    <hr style="border-top: 2px solid black;"> -->
 
     <div id="back" onclick="closeProfile()"></div>
     <div id="profilis">
@@ -682,105 +680,13 @@ function myFunction() {
             }
         }
 
-        function openAdd() {
-              if ( window.innerWidth > 750) {  
-              document.getElementById("loaderer").style.opacity = "1";
-              document.getElementById("buttoe").style.opacity = "0.4";   
-              document.getElementById("buttoe").style.pointerEvents = "none";   
-              setTimeout(() => {
-                document.getElementById("back2").style.zIndex = "25";
-                }, 3000);
-                setTimeout(() => {
-                    document.getElementById("back2").style.opacity = "0.9";
-                }, 3100);
-                setTimeout(() => {
-                  document.getElementById("add").style.top = "30%";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("add").style.right = "5%";
-                }, 3000);
-                setTimeout(() => {   document.getElementById("add").style.top = "2%"; }, 3270);
-                setTimeout(() => {
-                  document.getElementById("add").style.overflowY = "scroll";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("add").style.zIndex = "25";
-                }, 3000);
-                setTimeout(() => {
-                  document.title = 'add a new moon_astec☽ item';
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("loaderer").style.opacity = "0";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("buttoe").style.opacity = "1";   
-                  document.getElementById("buttoe").style.pointerEvents = "all";
-                }, 3000);
-            }
-            else {
-              document.getElementById("loaderer").style.opacity = "1";
-              document.getElementById("buttoe").style.opacity = "0.4";   
-              setTimeout(() => {
-                document.getElementById("back2").style.zIndex = "25";
-                }, 3000);
-                setTimeout(() => {
-                    document.getElementById("back2").style.opacity = "0.9";
-                }, 3100);
-                setTimeout(() => {
-                  document.getElementById("add").style.top = "-0.5%";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("add").style.right = "5%";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("add").style.overflowY = "scroll";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("add").style.zIndex = "25";
-                }, 3000);
-                setTimeout(() => {
-                  document.title = 'add a new moon_astec☽ item';
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("loaderer").style.opacity = "0";
-                }, 3000);
-                setTimeout(() => {
-                  document.getElementById("buttoe").style.opacity = "1";   
-                  document.getElementById("buttoe").style.pointerEvents = "all";
-                }, 3000);
-            }
-        }
-
-        function closeAdd() {
-            if ( window.innerWidth > 750) {     
-                document.getElementById("add").style.top = "-120%";;
-                document.getElementById("add").style.overflowY = "hidden";
-                document.getElementById("add").style.zIndex = "-1";
-                document.getElementById("back2").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("back2").style.zIndex = "-1";
-                }, 300);
-                document.title = 'moon_astec☽ work';
-            }
-            else {
-                document.getElementById("add").style.right = "-200%";
-                document.getElementById("add").style.overflowY = "scroll";
-                document.getElementById("add").style.zIndex = "20";
-                document.getElementById("back2").style.opacity = "0";
-                setTimeout(() => {
-                    document.getElementById("back2").style.zIndex = "-1";
-                }, 300);
-                document.title = 'moon_astec☽ work';
-            }
-        }
-
         function file1() {
                 setTimeout(() => {
       document.getElementById("fileMenu").style.opacity = "1";
                 }, 200);
                 setTimeout(() => {
         document.getElementById("arrow1").style.opacity = "1";
-        document.getElementById("arrow1").style.top = "395px";
+        document.getElementById("arrow1").style.top = "393px";
         document.getElementById("arrow1").style.opacity = "1";
       document.getElementById("file1").style.cursor = "default";
       document.getElementById("file1").style.pointerEvents = "none";
@@ -797,7 +703,7 @@ function file1close() {
         setTimeout(() => {
           document.getElementById("fileMenu").style.height = "0";
         document.getElementById("arrow1").style.opacity = "0";
-        document.getElementById("arrow1").style.top = "345px";
+        document.getElementById("arrow1").style.top = "343px";
         document.getElementById("file1").style.cursor = "pointer";
         document.getElementById("file1").style.pointerEvents = "all";
                 }, 200);
@@ -811,6 +717,32 @@ function download1() {
   document.getElementById("download1").style.cursor = "default";
   document.getElementById("loading1").style.display = "flex";
   setTimeout(() => { document.getElementById("loading1").style.opacity = "1";}, 50);
+  setTimeout(() => { document.getElementById("loading1").style.opacity = "0";}, 2000);
+  setTimeout(() => { document.getElementById("loading1").style.display = "none"; 
+  document.getElementById("download1").style.opacity = "1"; 
+  document.getElementById("download1").style.pointerEvents = "all"; 
+  document.getElementById("download1").style.cursor = "pointer";}, 2300);
+  setTimeout(() => {
+    window.open('darbai/work1.docx');
+  }, 2300);
+  setTimeout(() => {
+    document.getElementById("fileMenu").style.opacity = "0";
+    document.getElementById("start").style.left = "20px";
+    document.getElementById("arrow1").style.transform = "rotate(0deg)";
+  }, 2600);
+        setTimeout(() => {
+          document.getElementById("fileMenu").style.height = "0";
+        document.getElementById("arrow1").style.opacity = "0";
+        document.getElementById("arrow1").style.top = "343px";
+        document.getElementById("file1").style.cursor = "pointer";
+        document.getElementById("file1").style.pointerEvents = "all";
+                }, 2800);
+                setTimeout(() => {
+        document.getElementById("arrow1").style.display = "none";
+                }, 3200);
+                setTimeout(() => {
+    document.getElementById("start").style.left = "-400px";
+  }, 5600);
 }
 function complete1() {
   document.getElementById("complete1").style.opacity = "0";
@@ -836,7 +768,7 @@ function complete1() {
                 }, 2500);
                 setTimeout(() => {
         document.getElementById("arrow1").style.display = "none";
-                }, 2600);
+                }, 2800);
                 setTimeout(() => {
         document.getElementById("completeInfo1").style.opacity = "0";
                 }, 7600);
