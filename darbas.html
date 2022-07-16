@@ -308,6 +308,34 @@
     bottom: 0;
     transition: 0.3s;
 }
+#add{
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    top: -100%;
+    left: 5%;
+    right: 5%;
+    position: fixed;
+  text-align: center;
+  background-color: azure;
+    color: black;
+    margin: 0 auto;
+  margin-top: 20px;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+#back2{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
 #closing{
     font-size: 35px; 
     position: absolute; 
@@ -405,6 +433,22 @@
 #arrow1:hover{
  color: white;
 }
+.btnu{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btnu:hover{
+            background-color: gray;
+          color: white;
+}
 @media only screen and (max-width: 750px){
     #profilis{
         width: 90%;
@@ -427,14 +471,6 @@
   top: 220px;
   right: 2.5%;
 }
-#butto{
-  bottom: 20px;
-}
-.open-button2{
-  left: 15px;
-  box-shadow: 0 0 10px;
-  bottom: 100px;
-}
 }
     </style>
     <div id="screen">
@@ -444,14 +480,18 @@
   </div>
    <div class="nuotrauka"></div>
    <h2>Employee: Moon_astec&#9789;</h2>
-        <!-- <div class="siuntimas"> 
-        <a href="mailto: moon.astec.work@gmail.com" target="_blank">Išsiųsti pataisytus duomenis</a>
-        </div> -->
         <section>
      
+          <div id="back2" onclick="closeAdd()"></div>
+    <div id="add">
+      <i class="fas fa-times" id="closing" onclick="closeAdd()"></i>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSclQ_87P8Pb_Zt-G_-71Ekanl7vUZwZX1sNzg4j0C-Soez9pQ/viewform?usp=sf_link" frameborder="0" style="width: 100%; height: auto; margin-top: 75px; border-radius: 15px;"></iframe>
+    </div>
+          
       <button class="open-button2" onclick="openForm()"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
-      <button class="open-button2" id="butto" style="left: 15px;" onclick="openMoon()"><span style="transition: 0.3s opacity; cursor: pointer;" id="moon">Moon_astec&#9789;</span></button>
-      <div style="width: 50px; height: 50px; border-radius: 100%; position: fixed; bottom: 12.5px; left: 88px; opacity: 0; display: none; margin: 13px auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite;" id="loader3"></div>
+      <button class="btnu" id="butto" onclick="openMoon()"><i class="fa-solid fa-moon" style="font-size: 20px; transform: rotate(-150deg);" id="moon"></i></button>
+      <div style="width: 60px; height: 60px; border-radius: 100%; position: fixed; bottom: 7px; left: 20px; opacity: 0; display: none; margin: 13px auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite;" id="loader3"></div>
+      <button class="btnu" id="buttoe" style="top: 20px; z-index: 20;" onclick="openAdd()"><i class="fa-solid fa-plus" style="font-size: 20px;" id="moon"></i></button>
        <div class="chat-popup2" id="myForm2">
   <form action="prisijungimas.html" class="form-container2" id="formo">
   <h1 style="margin-bottom: 10px; font-size: 20px;">Log out</h1>
@@ -465,11 +505,12 @@
   </form>
 </div>
       </section>
-      <div style="width: 50px; height: 50px; transition: 0.3s; background-color: lightgray; border-radius: 100%; display: flex; justify-content: center; align-items: center; position: absolute; top: 25px; right: 25px; cursor: pointer; z-index: 10;" id="show" onclick="myFunction()">
-        <i class="fas fa-user-circle" style="font-size: 40px; color: white;"></i>
+      <div style="width: 60px; height: 60px; transition: 0.3s; background-color: lightgrey; border-radius: 100%; display: flex; justify-content: center; align-items: center; position: absolute; top: 20px; right: 20px; cursor: pointer; z-index: 10;" id="show" onclick="myFunction()">
+        <i class="fa-solid fa-user" style="font-size: 30px; color: black;"></i>
     </div>
-    <div style="width: 50px; height: 50px; border-radius: 100%; opacity: 0; margin: 0 auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite; position: absolute; z-index: 5; top: 25px; right: 25px;" id="loader">
-  </div>
+    <div style="width: 60px; height: 60px; border-radius: 100%; opacity: 0; margin: 0 auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite; position: absolute; z-index: 5; top: 20px; right: 20px;" id="loader">
+    </div>
+    <div style="width: 60px; height: 60px; border-radius: 100%; opacity: 0; margin: 0 auto; box-shadow: 2.5px 0 10px darkgray; justify-content: center; transition: 0.3s; align-items: center; animation: spin 1s linear infinite; position: absolute; z-index: 5; top: 20px; left: 20px;" id="loaderer"></div>
     <h1 style="margin-top: 10px; margin-bottom: 10px;">Moon_astec&#9789; work</h1>
     
 
@@ -517,7 +558,7 @@ function myFunction() {
               document.getElementById("loader").style.opacity = "1";
               document.getElementById("show").style.opacity = "0.4";   
               setTimeout(() => {
-                document.getElementById("back").style.zIndex = "20";
+                document.getElementById("back").style.zIndex = "25";
                 }, 3000);
                 setTimeout(() => {
                     document.getElementById("back").style.opacity = "0.9";
@@ -549,7 +590,7 @@ function myFunction() {
               document.getElementById("loader").style.opacity = "1";
               document.getElementById("show").style.opacity = "0.4";   
               setTimeout(() => {
-                document.getElementById("back").style.zIndex = "20";
+                document.getElementById("back").style.zIndex = "25";
                 }, 3000);
                 setTimeout(() => {
                     document.getElementById("back").style.opacity = "0.9";
@@ -640,6 +681,99 @@ function myFunction() {
                 }, 600);
             }
         }
+
+        function openAdd() {
+              if ( window.innerWidth > 750) {  
+              document.getElementById("loaderer").style.opacity = "1";
+              document.getElementById("buttoe").style.opacity = "0.4";   
+              document.getElementById("buttoe").style.pointerEvents = "none";   
+              setTimeout(() => {
+                document.getElementById("back2").style.zIndex = "25";
+                }, 3000);
+                setTimeout(() => {
+                    document.getElementById("back2").style.opacity = "0.9";
+                }, 3100);
+                setTimeout(() => {
+                  document.getElementById("add").style.top = "30%";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("add").style.right = "5%";
+                }, 3000);
+                setTimeout(() => {   document.getElementById("add").style.top = "2%"; }, 3270);
+                setTimeout(() => {
+                  document.getElementById("add").style.overflowY = "scroll";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("add").style.zIndex = "25";
+                }, 3000);
+                setTimeout(() => {
+                  document.title = 'add a new moon_astec☽ item';
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("loaderer").style.opacity = "0";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("buttoe").style.opacity = "1";   
+                  document.getElementById("buttoe").style.pointerEvents = "all";
+                }, 3000);
+            }
+            else {
+              document.getElementById("loaderer").style.opacity = "1";
+              document.getElementById("buttoe").style.opacity = "0.4";   
+              setTimeout(() => {
+                document.getElementById("back2").style.zIndex = "25";
+                }, 3000);
+                setTimeout(() => {
+                    document.getElementById("back2").style.opacity = "0.9";
+                }, 3100);
+                setTimeout(() => {
+                  document.getElementById("add").style.top = "-0.5%";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("add").style.right = "5%";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("add").style.overflowY = "scroll";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("add").style.zIndex = "25";
+                }, 3000);
+                setTimeout(() => {
+                  document.title = 'add a new moon_astec☽ item';
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("loaderer").style.opacity = "0";
+                }, 3000);
+                setTimeout(() => {
+                  document.getElementById("buttoe").style.opacity = "1";   
+                  document.getElementById("buttoe").style.pointerEvents = "all";
+                }, 3000);
+            }
+        }
+
+        function closeAdd() {
+            if ( window.innerWidth > 750) {     
+                document.getElementById("add").style.top = "-120%";;
+                document.getElementById("add").style.overflowY = "hidden";
+                document.getElementById("add").style.zIndex = "-1";
+                document.getElementById("back2").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("back2").style.zIndex = "-1";
+                }, 300);
+                document.title = 'moon_astec☽ work';
+            }
+            else {
+                document.getElementById("add").style.right = "-200%";
+                document.getElementById("add").style.overflowY = "scroll";
+                document.getElementById("add").style.zIndex = "20";
+                document.getElementById("back2").style.opacity = "0";
+                setTimeout(() => {
+                    document.getElementById("back2").style.zIndex = "-1";
+                }, 300);
+                document.title = 'moon_astec☽ work';
+            }
+        }
+
         function file1() {
                 setTimeout(() => {
       document.getElementById("fileMenu").style.opacity = "1";
@@ -715,8 +849,8 @@ function complete1() {
 }
 
 function openMoon() {
-  document.getElementById("moon").style.opacity = "0";
   document.getElementById("butto").style.cursor = "default";
+  document.getElementById("butto").style.opacity = "0.4";
   document.getElementById("butto").style.pointerEvents = "none";
   setTimeout(() => {
     document.getElementById("loader3").style.display = "flex";
@@ -735,6 +869,7 @@ function openMoon() {
     document.getElementById("moon").style.opacity = "1";
     document.getElementById("butto").style.cursor = "pointer";
     document.getElementById("butto").style.pointerEvents = "all";
+    document.getElementById("butto").style.opacity = "1";
   }, 3300);
 }
 
