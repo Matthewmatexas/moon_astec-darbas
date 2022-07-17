@@ -693,12 +693,16 @@ function myFunction() {
       document.getElementById("fileMenu").style.height = "50px";
                 }, 50);
                 document.getElementById("arrow1").style.display = "inline-block";
+                document.getElementById("file1").style.borderRadius = "0 15px 15px 15px";
+                document.getElementById("fileMenu").style.borderRadius = "15px 15px 15px 0";
       setTimeout(() => {
         document.getElementById("arrow1").style.transform = "rotate(-180deg)";
                 }, 200);
 }
 function file1close() {
         document.getElementById("fileMenu").style.opacity = "0";
+        document.getElementById("fileMenu").style.borderRadius = "15px";
+        document.getElementById("file1").style.borderRadius = "15px";
         document.getElementById("arrow1").style.transform = "rotate(0deg)";
         setTimeout(() => {
           document.getElementById("fileMenu").style.height = "0";
@@ -729,6 +733,8 @@ function download1() {
     document.getElementById("fileMenu").style.opacity = "0";
     document.getElementById("start").style.left = "20px";
     document.getElementById("arrow1").style.transform = "rotate(0deg)";
+    document.getElementById("fileMenu").style.borderRadius = "15px";
+    document.getElementById("file1").style.borderRadius = "15px";
   }, 2600);
         setTimeout(() => {
           document.getElementById("fileMenu").style.height = "0";
@@ -765,6 +771,8 @@ function complete1() {
         document.getElementById("arrow1").style.top = "345px";
         document.getElementById("file1").style.cursor = "pointer";
         document.getElementById("file1").style.pointerEvents = "all";
+        document.getElementById("fileMenu").style.borderRadius = "15px";
+        document.getElementById("file1").style.borderRadius = "15px";
                 }, 2500);
                 setTimeout(() => {
         document.getElementById("arrow1").style.display = "none";
